@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Macarons",
+    "image": "img1",
+    "price": 350
+  },
+  {
+    "id": 2,
+    "name": "cupcakes",
+    "image": "img2",
+    "price": 300
+  },
+  {
+    "id": 3,
+    "name": "cookie-iceCream",
+    "image": "img3",
+    "price": 350
+  },
+  {
+    "id": 4,
+    "name": "cookie-dough",
+    "image": "img4",
+    "price": 250
+  },
+  {
+    "id": 5,
+    "name": "waffels",
+    "image": "img5",
+    "price": 500
+  },
+  {
+    "id": 6,
+    "name": "Apple-Tart",
+    "image": "img6",
+    "price": 450
+  }
+]
