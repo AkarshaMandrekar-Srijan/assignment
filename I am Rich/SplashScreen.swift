@@ -16,7 +16,7 @@ struct SplashScreen: View {
     var body: some View {
         //linking splash screen to main page
         if isActive{
-            ContentView()
+                ContentView()
         }else{
             
             VStack{

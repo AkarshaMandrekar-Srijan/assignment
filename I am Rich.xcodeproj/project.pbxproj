@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7BB4A428D1913B00022769 /* jsonformatter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A328D1913B00022769 /* jsonformatter.json */; };
+		2D7BB4A628D1916B00022769 /* userDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A528D1916B00022769 /* userDataLoader.swift */; };
+		2D7BB4A828D1DC8D00022769 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A728D1DC8D00022769 /* UserSettings.swift */; };
 		2DC0ECC228CF3AAF00EEF8FA /* I_am_RichApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */; };
 		2DC0ECC428CF3AAF00EEF8FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */; };
 		2DC0ECC628CF3AB000EEF8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC528CF3AB000EEF8FA /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D7BB4A328D1913B00022769 /* jsonformatter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonformatter.json; sourceTree = "<group>"; };
+		2D7BB4A528D1916B00022769 /* userDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataLoader.swift; sourceTree = "<group>"; };
+		2D7BB4A728D1DC8D00022769 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		2DC0ECBE28CF3AAF00EEF8FA /* I am Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I am Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_am_RichApp.swift; sourceTree = "<group>"; };
 		2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				2DD6654B28D0A3A5008C0C81 /* product.json */,
+				2D7BB4A328D1913B00022769 /* jsonformatter.json */,
 				2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */,
 				2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */,
 				2DC2519928CF528600AD70E2 /* SplashScreen.swift */,
@@ -76,6 +83,8 @@
 				2DC0ECC728CF3AB000EEF8FA /* Preview Content */,
 				2DD6654D28D0A409008C0C81 /* productData.swift */,
 				2DD6654F28D0A674008C0C81 /* dataLoader.swift */,
+				2D7BB4A528D1916B00022769 /* userDataLoader.swift */,
+				2D7BB4A728D1DC8D00022769 /* UserSettings.swift */,
 			);
 			path = "I am Rich";
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7BB4A428D1913B00022769 /* jsonformatter.json in Resources */,
 				2DC0ECC928CF3AB000EEF8FA /* Preview Assets.xcassets in Resources */,
 				2DC0ECC628CF3AB000EEF8FA /* Assets.xcassets in Resources */,
 				2DD6654C28D0A3A5008C0C81 /* product.json in Resources */,
@@ -186,10 +196,12 @@
 				2DC2519A28CF528600AD70E2 /* SplashScreen.swift in Sources */,
 				2DD6654428D082B3008C0C81 /* Product.swift in Sources */,
 				2DC0ECC428CF3AAF00EEF8FA /* ContentView.swift in Sources */,
+				2D7BB4A828D1DC8D00022769 /* UserSettings.swift in Sources */,
 				2DD6654E28D0A409008C0C81 /* productData.swift in Sources */,
 				2DD6655028D0A674008C0C81 /* dataLoader.swift in Sources */,
 				2DD6654728D08488008C0C81 /* ProductCard.swift in Sources */,
 				2DC0ECC228CF3AAF00EEF8FA /* I_am_RichApp.swift in Sources */,
+				2D7BB4A628D1916B00022769 /* userDataLoader.swift in Sources */,
 				2DD6654A28D0896B008C0C81 /* displayItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,9 @@ struct I_am_RichApp: App {
         WindowGroup {
             SplashScreen()
             //this is the first screen that needs to be displayed
+            
+                .environmentObject(UserSettings())
+            //recently added
         }
     }
 }

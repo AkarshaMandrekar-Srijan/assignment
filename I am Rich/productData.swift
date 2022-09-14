@@ -12,6 +12,6 @@ struct productData: Codable{
     var id: Int
     var name: String
     var image: String
-    var Price: Int
+    var price: Int
     
 }

@@ -7,19 +7,32 @@
 
 import SwiftUI
 
+let product = dataLoader().pdata
+
 struct displayItem: View {
+    
+//recently added
+    @EnvironmentObject var settings: UserSettings
+    
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     
     var body: some View {
         
         ZStack {
             Color.white.ignoresSafeArea()
-            ScrollView {
-                LazyVGrid(columns: columns, spacing:20){
-                    ForEach(productList, id: \.id){
-                        product in ProductCard(product: product)
-                    }
-                }.padding()
+            VStack {
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing:20){
+                        ForEach(product, id: \.id){
+                            product in ProductCard(product: product)
+                        }
+                    }.padding()
+                    
+                }
+                
+                Button("Logout"){
+                    settings.isLoggedIn = false
+                }
             }
         }
     }
