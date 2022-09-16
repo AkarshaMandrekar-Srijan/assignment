@@ -16,7 +16,7 @@ struct SplashScreen: View {
     var body: some View {
         //linking splash screen to main page
         if isActive{
-                ContentView()
+            ContentView()
         }else{
             
             VStack{
@@ -28,7 +28,7 @@ struct SplashScreen: View {
                     Image("diamond").resizable().aspectRatio(contentMode: .fit).frame(width: 150.0, height: 150.0)
                 }
                 
-                //to give animated effect
+                //to give animated effect to above text and img
                 .scaleEffect(size)
                 .opacity(opacity)
                 .onAppear(){

@@ -1,0 +1,84 @@
+created an assignment which contained following:
+>splash screen  =>> fileName: SplashScreen
+>login          =>> fileName: contentView
+>Home Screnn    =>> fileName: displayItem
+
+functionality of the app:
+>to greet with splash screen =>> condition: * when app first starts &
+                                            * when reloaded
+                                            
+>move to Login screen        =>> condition: *One time login
+                                            *Login data to be stored in JSON format
+                                            *LogedIn user data should be saved and remebered
+                                            *so that on reloading the page Login screen Should NOT display
+                                            
+>DisplayItem                 =>> condition: *product displayed 2 in a row
+                                            *display product name/detail & price
+                                            *//created logout button
+                                            
+first launc:
+flashScreen => ContentView or LoginScreen => DisplayItem or HomeScreen
+
+reLaunch:
+flashScreen => DisplayItem or HomeScreen
+***********************************************************************************************************
+
+I_am_RichApp
+ContentView
+SplashScreen
+(update contentview)
+
+product.json
+jsonformatter.json
+decoding both into
+update contentview with userDetail parameter from jsonformatter.json
+create userDataLoader to load the data (update contentview's authenticaton function)
+create productdata =>dataLoder => ProductCard => displayItem
+create UserSettings => update ContentView =>update displayItem
+
+***********************************************************************************************************
+
+CGSize
+>>A structure that contains width and height values.
+
+>>Use scaleEffect(_:anchor:) to apply a horizontally and vertically scaling transform to a view.
+
+>>onAppear(perform:)  Adds an action to perform before particular view appears.
+
+>>There are two ways to run code after a delay using Swift, one of the method is using GCD, using GCD we can write something that runs code after a half-second delay:
+
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    // your code here
+}
+    as used in SplashScreen to display ContentView page after the animation delay
+    
+****
+contentView:
+
+
+
+****
+userDataLoader:
+        //bundle refers to everything inside the folder i am rich
+        //do catch incase of error
+        //inside do we will try to get the data from product.json file
+        //the data(cintentsof )call can throw hence its written innside doCatch and uses try before
+        
+****
+UserSettings:
+@ObservableObject protocol is used with some sort of class that can store data, the ObsercableObject wrapper is used inside a view to store an observable object instance in out case isLoggedIn,
+>>the @Published property wrapper is added to any properties inside an observed object that should cause views to update when they change.
+
+**
+@EnvironmentObject refer to a class that conforms to ObservableObject
+
+>>SwiftUI’s @EnvironmentObject property wrapper lets us create views that rely on shared data, often across an entire SwiftUI app. For example, if you create a user that will be shared across many parts of your app, you should use @EnvironmentObject.
+    #shared across many views
+    #will update any view when significant changes happen
+    #When a view using @EnvironmentObject is shown, SwiftUI will immediately search the environment for an object of the correct type
+
+**
+    .environmentObject(UserSettings()) is injected to the mainFile(I_am_RichApp) by passing Usersetting, to fix missing ancestor error
+    
+
+                

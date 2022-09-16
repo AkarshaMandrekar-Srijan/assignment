@@ -26,6 +26,7 @@ struct ContentView: View {
     
     @State private var loggedin = false
     
+    //required fro UserSetting
     @EnvironmentObject var settings: UserSettings
     
     
@@ -37,13 +38,13 @@ struct ContentView: View {
                 Color.blue.ignoresSafeArea()
                 Circle().scale(1.7).foregroundColor(.white.opacity(0.15))
                 Circle().scale(1.35).foregroundColor(.white)
-
-                        
+                
+                
                 if settings.isLoggedIn{
                     //Text("\(name) is logged in")
                     displayItem().environmentObject(settings)
                 }
-                       
+                
                 
                 
                 else {
@@ -57,46 +58,48 @@ struct ContentView: View {
                         
                         
                         VStack{
-                                    
-                                    //Username
-                                    Text("Login").font(.largeTitle).bold().padding()
-                                    //creating text field
-                                    TextField("Username", text:$username).padding().frame(width:300,height:50).background(Color.blue.opacity(0.05)).cornerRadius(20).border(.red, width: CGFloat(wrongUsername))
-                                    
-                                    //Password
-                                    SecureField("Password", text:$password).padding().frame(width:300,height:50).background(Color.blue.opacity(0.05)).cornerRadius(20).border(.red, width: CGFloat(wrongPassword))
-                                    
-                                    //Login Button
-                                    Button("Login"){
-                                        authen(username: username, password: password)
-                                        
-                                        settings.isLoggedIn = true
-                                        
-                                    }.frame(width:150, height:50).background(Color.blue).foregroundColor(.white).cornerRadius(20).padding(.top)
-                                    
-                                    
-                                    
-                                    if authenticationFails{
-                                        Text("Information is incorrect").padding().foregroundColor(.red)
-                                    }
-                                    
-                                    if authenticationsuccess{
-                                        Text("Logged In").foregroundColor(.green).offset(y: -280).font(.headline)
-                                        
-                                    }
-                                    
-                                    
+                            
+                            //Username
+                            Text("Login").font(.largeTitle).bold().padding()
+                            //creating text field
+                            TextField("Username", text:$username).padding().frame(width:300,height:50).background(Color.blue.opacity(0.05)).cornerRadius(20).border(.red, width: CGFloat(wrongUsername))
+                            
+                            //Password
+                            SecureField("Password", text:$password).padding().frame(width:300,height:50).background(Color.blue.opacity(0.05)).cornerRadius(20).border(.red, width: CGFloat(wrongPassword))
+                            
+                            //Login Button
+                            Button("Login"){
+                                authen(username: username, password: password)
+                                
+                                if authenticationsuccess{
+                                settings.isLoggedIn = true
+                                }
+                                
+                            }.frame(width:150, height:50).background(Color.blue).foregroundColor(.white).cornerRadius(20).padding(.top)
+                            
+                            
+                            
+                            if authenticationFails{
+                                Text("Information is incorrect").padding().foregroundColor(.red)
+                            }
+                            
+                            if authenticationsuccess{
+                                Text("Logged In").foregroundColor(.green).offset(y: -280).font(.headline)
+                                
+                            }
+                            
+                            
                         }
                     }
                 }
-                    
                 
-//                if loggedin{
-//                    displayItem()
-//                }
-//                NavigationLink(destination: displayItem(),isActive:$loggedin){
-//
-//                }
+                
+                //                if loggedin{
+                //                    displayItem()
+                //                }
+                //                NavigationLink(destination: displayItem(),isActive:$loggedin){
+                //
+                //                }
                 
             }.navigationTitle("").navigationBarHidden(true)
         }
@@ -109,37 +112,37 @@ struct ContentView: View {
         //dont want it to be case sensitive
         
         for i in 0...4{
-        
-        if username == loginData[i].username{
-            wrongUsername = 0
-            if password == loginData[i].password
-            {
-                wrongPassword = 0
-                loggedin = true
-                //entered inside the same if brace as we have to check both.
-                authenticationsuccess = true
-                authenticationFails = false
-                // print("Welcome Back")
-                break
-                
+            
+            if username == loginData[i].username{
+                wrongUsername = 0
+                if password == loginData[i].password
+                {
+                    wrongPassword = 0
+                    loggedin = true
+                    //entered inside the same if brace as we have to check both.
+                    authenticationsuccess = true
+                    authenticationFails = false
+                    // print("Welcome Back")
+                    break
+                    
+                }else{
+                    wrongPassword = 2
+                    print("wrong Password")
+                    authenticationFails = true
+                    authenticationsuccess = false
+                    
+                }
             }else{
-                wrongPassword = 2
-                print("wrong Password")
+                wrongUsername = 2
+                print("wrong Username")
                 authenticationFails = true
                 authenticationsuccess = false
                 
             }
-        }else{
-            wrongUsername = 2
-            print("wrong Username")
-            authenticationFails = true
-            authenticationsuccess = false
             
         }
         
-        }
-            
-            
+        
     }
 }
 
