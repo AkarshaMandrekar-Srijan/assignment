@@ -42,7 +42,10 @@ struct ContentView: View {
                 
                 if settings.isLoggedIn{
                     //Text("\(name) is logged in")
-                    displayItem().environmentObject(settings)
+                    APIdisplay().environmentObject(settings)
+                    //displayItem
+                    
+                    //if aalready logged in => display items screen
                 }
                 
                 
@@ -50,11 +53,13 @@ struct ContentView: View {
                 else {
                     if UserDefaults.standard.bool(forKey: "login") == true{
                         //Text("\(name) is logged in")
-                        displayItem().environmentObject(settings)
-                        
+                        APIdisplay().environmentObject(settings)
+                        //displayItem
                     }
                     
                     else {
+                        
+                        //show the login screen
                         
                         
                         VStack{

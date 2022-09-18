@@ -53,6 +53,10 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
     as used in SplashScreen to display ContentView page after the animation delay
     
 ****
+CGF:CGFloat is flexible in that its precision adapts to the type of device it's running on, whereas Float is always a fixed precision.
+
+
+*****
 contentView:
 
 
@@ -79,6 +83,8 @@ UserSettings:
 
 **
     .environmentObject(UserSettings()) is injected to the mainFile(I_am_RichApp) by passing Usersetting, to fix missing ancestor error
+**
+A Grid view arranges child views in rows and columns. This table-like structure makes a layout that is hard to do in vertical and horizontal stacks become easier
     
 
                 

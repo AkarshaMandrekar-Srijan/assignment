@@ -30,10 +30,14 @@ struct displayItem: View {
                     
                 }
                 
-                Button("Logout"){
-                    settings.isLoggedIn = false
-                }.frame(width:400,height: 45,alignment: .center).background(.ultraThinMaterial).cornerRadius(25).foregroundColor(Color.red).offset(y: 15)
             }
+            Button("Logout"){
+                settings.isLoggedIn = false
+            }.frame(width:400,height: 45,alignment: .center)
+                .background(.ultraThinMaterial)
+                .cornerRadius(25)
+                .foregroundColor(Color.red)
+                .offset(y: 415)
         }
     }
 }

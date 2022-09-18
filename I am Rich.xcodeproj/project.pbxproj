@@ -10,6 +10,7 @@
 		2D7BB4A428D1913B00022769 /* jsonformatter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A328D1913B00022769 /* jsonformatter.json */; };
 		2D7BB4A628D1916B00022769 /* userDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A528D1916B00022769 /* userDataLoader.swift */; };
 		2D7BB4A828D1DC8D00022769 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BB4A728D1DC8D00022769 /* UserSettings.swift */; };
+		2DB624EF28D5BB6E001D1652 /* APIdisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB624EE28D5BB6E001D1652 /* APIdisplay.swift */; };
 		2DC0ECC228CF3AAF00EEF8FA /* I_am_RichApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */; };
 		2DC0ECC428CF3AAF00EEF8FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */; };
 		2DC0ECC628CF3AB000EEF8FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0ECC528CF3AB000EEF8FA /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		2D7BB4A328D1913B00022769 /* jsonformatter.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonformatter.json; sourceTree = "<group>"; };
 		2D7BB4A528D1916B00022769 /* userDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userDataLoader.swift; sourceTree = "<group>"; };
 		2D7BB4A728D1DC8D00022769 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		2DB624EE28D5BB6E001D1652 /* APIdisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIdisplay.swift; sourceTree = "<group>"; };
 		2DC0ECBE28CF3AAF00EEF8FA /* I am Rich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I am Rich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_am_RichApp.swift; sourceTree = "<group>"; };
 		2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DB624EB28D5BA31001D1652 /* display Through API */ = {
+			isa = PBXGroup;
+			children = (
+				2DB624EE28D5BB6E001D1652 /* APIdisplay.swift */,
+			);
+			path = "display Through API";
+			sourceTree = "<group>";
+		};
 		2DC0ECB528CF3AAF00EEF8FA = {
 			isa = PBXGroup;
 			children = (
@@ -73,11 +83,12 @@
 		2DC0ECC028CF3AAF00EEF8FA /* I am Rich */ = {
 			isa = PBXGroup;
 			children = (
+				2DB624EB28D5BA31001D1652 /* display Through API */,
 				2DD6654B28D0A3A5008C0C81 /* product.json */,
+				2D7BB4A328D1913B00022769 /* jsonformatter.json */,
 				2DC0ECC128CF3AAF00EEF8FA /* I_am_RichApp.swift */,
 				2DC2519928CF528600AD70E2 /* SplashScreen.swift */,
 				2DC0ECC328CF3AAF00EEF8FA /* ContentView.swift */,
-				2D7BB4A328D1913B00022769 /* jsonformatter.json */,
 				2DD6654828D0890B008C0C81 /* display */,
 				2DD6654528D0846A008C0C81 /* components */,
 				2DD6654028D081FB008C0C81 /* model */,
@@ -207,6 +218,7 @@
 				2DC0ECC228CF3AAF00EEF8FA /* I_am_RichApp.swift in Sources */,
 				2D7BB4A628D1916B00022769 /* userDataLoader.swift in Sources */,
 				2DD6654A28D0896B008C0C81 /* displayItem.swift in Sources */,
+				2DB624EF28D5BB6E001D1652 /* APIdisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
