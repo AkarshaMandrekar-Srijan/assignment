@@ -47,8 +47,6 @@ struct APIdisplay: View {
            Color.white.ignoresSafeArea()
         VStack{
             ScrollView {
-                ForEach(results, id: \.id) { item in
-                    
                     //card:
                     
                     LazyVGrid(columns: columns, spacing:20){
@@ -84,8 +82,6 @@ struct APIdisplay: View {
                                 .shadow(radius:3)
                         }
                     }
-                    
-                }
                 .task {
                     await loadData()
                 }
