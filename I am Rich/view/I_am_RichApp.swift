@@ -16,6 +16,8 @@ struct I_am_RichApp: App {
             
                 .environmentObject(UserSettings())
             //recently added
+            
+            
         }
     }
 }

@@ -19,5 +19,5 @@ class UserSettings: ObservableObject{
     
     init(){
         self.isLoggedIn = false
-    }
+    }//without initializer, class userSettings will throw an error
 }

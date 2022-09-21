@@ -5,6 +5,9 @@
 //  Created by Akarsha Mandrekar on 13/09/22.
 //
 
+
+//NOTE this file was created for test purpose a combination of productData+ProductCard is actual data //used
+
 import Foundation
 
 struct Product: Identifiable{

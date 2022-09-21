@@ -11,7 +11,7 @@ let product = dataLoader().pdata
 
 struct displayItem: View {
     
-//recently added
+    //recently added
     @EnvironmentObject var settings: UserSettings
     
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
@@ -30,10 +30,14 @@ struct displayItem: View {
                     
                 }
                 
-                Button("Logout"){
-                    settings.isLoggedIn = false
-                }
             }
+            Button("Logout"){
+                settings.isLoggedIn = false
+            }.frame(width:400,height: 45,alignment: .center)
+                .background(.ultraThinMaterial)
+                .cornerRadius(25)
+                .foregroundColor(Color.red)
+                .offset(y: 415)
         }
     }
 }
