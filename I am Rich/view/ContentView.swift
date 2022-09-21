@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @StateObject private var viewModel = ContentViewModel()
     @EnvironmentObject var settings: UserSettings
-    
+       
     
     var body: some View {
         
@@ -133,7 +133,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserSettings())
     }
 }
 
