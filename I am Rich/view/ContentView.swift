@@ -27,7 +27,8 @@ struct ContentView: View {
                 Circle().scale(1.35).foregroundColor(.white)
                 
                 
-                if settings.isLoggedIn{
+                if settings.isLoggedIn{//user already logged in
+                    
                     //Text("\(name) is logged in")
                     APIdisplay().environmentObject(settings)
                     //displayItem
@@ -36,8 +37,9 @@ struct ContentView: View {
                 
                 
                 
-                else {
-                    if UserDefaults.standard.bool(forKey: "login") == true{
+                else {//user trying to log in
+                    
+                    if UserDefaults.standard.bool(forKey: "login"){
                         //Text("\(name) is logged in")
                         APIdisplay().environmentObject(settings)
                         //displayItem

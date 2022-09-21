@@ -88,7 +88,6 @@
 				2DD6654028D081FB008C0C81 /* model */,
 				2DD2723928D8B778002793E6 /* view */,
 				2DD2723728D8B712002793E6 /* ViewModel */,
-				2DD2723E28D8BBB2002793E6 /* data */,
 				2DC0ECC728CF3AB000EEF8FA /* Preview Content */,
 				2DD2723828D8B750002793E6 /* Json */,
 			);
@@ -108,9 +107,10 @@
 		2DD2723728D8B712002793E6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2DD2723F28D8C45E002793E6 /* ContentViewVM.swift */,
 				2DD2724128D8C8D7002793E6 /* SplashScreenVM.swift */,
+				2DD2723F28D8C45E002793E6 /* ContentViewVM.swift */,
 				2DD2724328D8CB9A002793E6 /* apiVM.swift */,
+				2DD2723E28D8BBB2002793E6 /* data */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,9 +140,9 @@
 		2DD2723E28D8BBB2002793E6 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				2D7BB4A728D1DC8D00022769 /* UserSettings.swift */,
 				2D7BB4A528D1916B00022769 /* userDataLoader.swift */,
 				2DD6654F28D0A674008C0C81 /* dataLoader.swift */,
-				2D7BB4A728D1DC8D00022769 /* UserSettings.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";

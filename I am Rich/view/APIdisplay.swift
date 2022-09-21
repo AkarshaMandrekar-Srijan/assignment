@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct APIdisplay: View {
+    
     @StateObject private var APIvm = APIViewModel()
     @EnvironmentObject var settings: UserSettings
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]

@@ -37,22 +37,29 @@ struct SplashScreen: View {
                 .opacity(SplashVM.opacity)
                 .onAppear(){
                     withAnimation(.easeIn(duration: 1.2)){
-                        self.SplashVM.size = 0.9
-                        self.SplashVM.opacity = 1.0
+                        SplashVM.size = 0.9
+                        SplashVM.opacity = 1.0
+                        
+                        /*the above lines were written as self.size and self.opacity
+                         but since the model is no longer inside a closure we use the object
+                         of SplashScreenViewModel*/
                     }
                 }
             }
             //display the page for 2s and moves to main page.
             .onAppear{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
-                    self.SplashVM.isActive=true
+                    SplashVM.isActive=true
+                    /*similarly self.isActive */
                 }
                 
             }
         }
     }
     
-    struct SplashScreen_Previews: PreviewProvider {
+    
+    
+struct SplashScreen_Previews: PreviewProvider {
         static var previews: some View {
             SplashScreen()
         }
