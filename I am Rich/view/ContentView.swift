@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @StateObject private var viewModel = ContentViewModel()
     @EnvironmentObject var settings: UserSettings
-    
+       
     
     var body: some View {
         
@@ -74,20 +74,23 @@ struct ContentView: View {
                             
                             
                             //Login Button
-                            Button("Login"){
+                            Button{
                                 viewModel.authen(username: viewModel.username, password: viewModel.password)
                                 
                                 if viewModel.authenticationsuccess{
                                     settings.isLoggedIn = true
                                 }
                                 
-                            }.frame(width:150, height:50)
+                            }label: {
+                                Text("Log In")
+                             .bold()
+                             .frame(width:120, height:50)
                              .background(Color.blue)
                              .foregroundColor(.white)
-                             .cornerRadius(20)
+                             .cornerRadius(15)
                              .padding(.top)
                             
-                            
+                            }
                             
                             
                             if viewModel.authenticationFails{
@@ -133,7 +136,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserSettings())
     }
 }
 

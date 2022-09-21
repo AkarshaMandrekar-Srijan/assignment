@@ -60,13 +60,28 @@ struct APIdisplay: View {
                     }
                 }
             }
-            Button("Logout"){
-                settings.isLoggedIn = false
-            }.frame(width:400,height: 45,alignment: .center)
-                .background(.ultraThinMaterial)
-                .cornerRadius(25)
-                .foregroundColor(Color.red)
-                .offset(y: 415)
+            
+            
+            
+            .safeAreaInset(edge: .bottom) {
+                Button{
+                    settings.isLoggedIn = false
+                }label: {
+                    Text( "Logout")
+                
+                    .bold()
+                    .frame(maxWidth: .infinity)
+                    .padding(.top)
+                    .background(.ultraThinMaterial)
+                    .foregroundColor(Color.red)
+                    .font(.system(size: 23))
+
+                }
+            
+            }
+            
+            
+            
         }
         
         
